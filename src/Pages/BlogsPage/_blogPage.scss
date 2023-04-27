@@ -1,0 +1,103 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+@use '../../styles/mixin' as mix;
+
+
+.blogs-page{
+    padding: 0rem 2rem;
+}
+
+.blogs-ads{
+    background-color: v.$secondary-color-dark;
+    height: 30vh;
+}
+
+.blogs-search-bar{
+    box-shadow: 1px 1px 1px 1px rgb(224, 223, 223);
+    padding: 1rem;
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 1rem;
+
+    .blogs-search-form{
+        display: flex;
+        justify-content: space-evenly;
+        gap: 1rem;
+        align-items: center;
+        
+    }
+   .blogs-search-form-select{
+    width: 100%;
+    background-color: transparent;
+    color: v.$secondary-color-dark;
+    font-size: 1rem;
+    border: 1px solid v.$secondary-color-dark;
+    outline: v.$secondary-color-dark;
+
+   }
+  .blogs-search-form-button{
+    background-color: v.$secondary-color-dark;
+    width: 100%;
+    &:hover{
+        background-color: v.$theme-color;
+    }
+  }
+    
+}
+
+.blogs-flex-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin: 2rem 0rem;
+   
+    .blogs-tabs-sections{
+        flex: 3;
+        padding: 0rem 0rem;
+       border-right: 1px solid rgb(209, 209, 209);
+        padding: 0rem 1rem;
+        
+    }
+
+    .blogs-recomandations-section{
+        flex: 1;
+        
+        text-align: center;
+        padding: 0.3rem 0.5rem;
+        height: max-content;
+        padding: 1.5rem 0rem;
+       
+        .blogs-recomandation-section-headings{
+            font-size: 1.4rem;
+            padding: 1rem;
+            color: rgb(5, 5, 108);
+            border-bottom: 2px solid lightgray;
+        }
+        .blogs-recomandation-section-links{
+            border-bottom: 2px solid rgb(209, 209, 209);
+            padding: 1.2rem 0rem;
+            color: rgb(74, 74, 74);
+            
+            
+        }
+        
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .blogs-page{
+        padding: 0rem 1rem;
+    }
+    .blogs-search-form{
+        flex-direction: column;
+    }
+    .blogs-flex-container{
+        flex-direction: column;
+        .blogs-tabs-sections{
+            border-right: none;
+        }
+    }
+
+}

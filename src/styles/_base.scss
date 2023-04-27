@@ -1,0 +1,54 @@
+@use './variable' as v;
+// Heading styles
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.75rem;
+  }
+  
+  // Paragraph styles
+  p {
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  // Link styles
+  a {
+    color: v.$theme-color;
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  // Form control styles
+  input[type="text"],
+  textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  select{
+    width: 12rem;
+    height: 2rem;
+    background-color: lightgrey;
+    border: none;
+   padding-right: 1rem;
+    
+  }

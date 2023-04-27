@@ -1,0 +1,434 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+@use '../../styles/mixin' as mix;
+
+
+
+.hero-section{
+    height: 40vh;
+    background:url("../../Assets/heroimg.jpg");
+    background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: 100% 100%;
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.522);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ .her0-info{
+    position: relative;
+    
+ }
+    .hero-heading{
+        margin: 0;
+        color: v.$theme-color;
+    }
+    .hero-desc{
+        margin: 0;
+        color: v.$light-color;
+        font-weight: f.$bold-weight ;
+        font-size: f.$large-font-size ;
+    }
+
+
+    
+}
+.hero-form-container{
+    background-color: v.$light-color;
+    box-shadow: 2px 2px 2px 2px  rgba(211, 211, 211, 0.329);
+    height: 20%;
+    width: 80%;
+    max-width: 55rem;
+    position: absolute;
+    top: 20rem;
+    padding: 3rem;
+    
+
+    .search-input-container{
+        text-align: start;
+       display: flex;
+       justify-content: space-evenly;
+       margin-bottom: 1rem;
+        
+    }
+    .location-container{
+        text-align: start;
+        display: flex;
+        justify-content: space-between;
+        padding: 0.2rem 1.3rem;
+        align-items: flex-end;
+    }
+    .location-input-container{
+        display: flex;
+
+        align-items: center;
+        margin-top: 0.3rem;
+        background-color: v.$light-color;
+        width: 25rem;
+        border-radius: 0.2rem;
+        overflow: hidden;
+        border: 1px solid;
+        border-color: v.$secondary-color;
+        .location-input{
+            width: 100%;
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+        }
+       .search-input-pin{
+        color: v.$theme-color;
+       }
+        
+    }
+    .search-container-button{
+        border: none;
+        background-color: v.$theme-color;
+        color: v.$light-color;
+        width: 30%;
+        height: 3rem;
+        font-size: large;
+        font-weight: f.$bold-weight;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.8;
+            transition: 0.8s;
+        }
+    }
+    
+}
+
+.widespace{
+    background-color: v.$white-color ;
+    padding: 3rem;
+    height: 25vh;
+}
+.widespace-1{
+    background-image: url('../../Assets//bg-wide.jpg');
+    height: 20vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.73);
+}
+
+.reacently-viewed{
+    background-color: v.$nav-color;
+    height: max-content ;
+    padding: 3rem 2rem;
+    color:v.$white-color;
+    font-size: large;
+    font-weight: f.$bold-weight;
+    flex-wrap: wrap;
+    
+   
+
+    .reacently-viewed-card-container{
+        display: flex;
+        gap: 2rem;
+        overflow-x: scroll;
+        padding: 1rem 0.5rem;
+        
+
+  
+        
+        
+    }
+    @include mix.scroll-bar
+    
+  
+    
+}
+
+.popular-makes{
+    text-align: center;
+    margin: 2rem 0rem;
+    padding: 0rem 1rem;
+    color: v.$theme-color;
+   
+    
+
+    .make-container{
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        margin: 2rem 0rem;
+        padding: 1rem 0rem;
+        overflow-y: scroll;
+        
+        
+        
+    }
+    @include mix.scroll-bar
+}
+
+.car-selling-section{
+    background-color: v.$light-color;
+    
+    height: max-content;
+    margin: 5rem 0rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    .selling-section-heading{
+        color: v.$theme-color;
+        
+    }
+    .selling-sub-heading{
+
+        .selling-sub-span{
+            color: v.$theme-color;
+        }
+    }
+    .car-selling-button{
+        background-color: v.$theme-color;
+        &:hover{
+            background-color: v.$theme-color;
+        }
+    }
+}
+.recently-listed-section{
+    padding: 0rem 1rem;
+    text-align: center;
+    
+    
+    .reacently-heading{
+        margin: 3rem 0rem;
+        color: v.$theme-color;
+    }
+    .card-container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+}
+
+.why-choose-us{
+    text-align: center;
+    color: v.$theme-color;
+    margin: 4rem 0rem;
+    padding: 0rem 1rem;
+    
+}
+
+.two-column-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0rem;
+    text-align: start;
+    height: max-content;
+    
+    
+    .left-column{
+        background-image: url("../../Assets//home1.jpg");
+    }
+    
+    .right-column{
+        background-image: url("../../Assets//home2.jpg");
+    }
+    
+    .left-column, .right-column {
+        height: max-content;
+        color: v.$light-color;
+        background-blend-mode: overlay;
+        background-color: rgba(34, 26, 26, 0.71);
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-shadow: 2px 2px 2px 2px v.$secondary-light-color,;
+        border: 1px solid v.$secondary-light-color;
+        font-weight: f.$medium-weight;
+        border-radius: 0.5rem;
+      flex: 1;
+      padding: 1rem 1.2rem;
+      gap: 3rem;
+      row-gap: 2rem;
+      transition: 0.5s;
+
+
+      &:hover{
+        box-shadow: 3px 3px 3px 3px v.$secondary-light-color,;
+        transition: 0.5s;
+      }
+      
+      
+      
+      .why-choose-sub-heading{
+        margin-top: 0;
+        color: v.$theme-color;
+      }
+      
+      .why-choose-link {
+        
+        background-color: v.$theme-color;
+        padding: 0.7rem;
+       width: max-content;
+       color: v.$light-color;
+        font-weight: f.$bold-weight;
+       display: flex;
+       justify-content: flex-start;
+       gap: 0.5rem;
+      
+        
+       
+        
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+          
+        }
+      }
+    }
+
+    
+    
+    @media (max-width: 768px) {
+      .left-column, .right-column {
+        flex-basis: 100%;
+        
+        padding: 20px;
+      }
+    }
+  }
+  
+  .home-blog-section{
+    margin: 5rem 0rem;
+    text-align: center;
+    color: v.$theme-color;
+    padding: 0rem 1rem;
+    @include mix.scroll-bar;
+
+    .home-blog-card-container{
+        margin: 2rem 0rem;
+        display: flex;
+        
+        gap: 2rem;
+        overflow-x: scroll;
+        
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .hero-section{
+        align-items: normal;
+        padding-top: 2rem;
+    }
+    .hero-form-container{
+        margin-bottom: 3rem;
+        height: max-content;
+        width: 50%;
+        top: 15rem;
+        .search-input-container{
+            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .location-container{
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+            padding: 0;
+
+         .location-input-container{
+            width: 100%;
+            
+         }   
+         .search-container-button{
+            width: 100%;
+         }
+        }
+        .widespace{
+            background-color: v.$white-color ;
+            height: 40vh;
+        }
+        .recently-listed-section{
+
+            .card-container{
+                justify-content: center;
+            }
+        }
+    }
+   
+
+    
+    
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .widespace{
+        background-color: v.$white-color ;
+        height: 10vh;
+    }
+    .recently-listed-section{
+
+        .card-container{
+            justify-content: center;
+        }
+    }
+    .popular-makes{
+        .make-container{
+            justify-content: center;
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    
+    .recently-listed-section{
+
+        .card-container{
+            justify-content: center;
+        }
+    }
+    .widespace{
+        background-color: v.$white-color ;
+        height: 15vh;
+    }
+}
+
+
+
+@media only screen and (min-width: 1450px) { 
+  .recently-listed-section{
+
+        .card-container{
+            padding: 0rem 5rem;
+        }
+    }
+    .why-choose-us{
+        padding: 0rem 16rem;
+    }
+    .home-blog-section{
+        padding: 0rem 16rem;
+    }
+   
+}
+
+@media only screen and (max-height: 600px) {
+    .widespace{
+        background-color: v.$white-color ;
+        height: 15vh;
+    }
+     .recently-listed-section{
+
+            .card-container{
+                justify-content: center;
+            }
+        }
+}

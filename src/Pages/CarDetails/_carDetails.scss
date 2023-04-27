@@ -1,0 +1,352 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+@use '../../styles/mixin' as mix;
+
+
+
+.ads{
+    height: 15rem;
+    background-color: teal;
+    margin: 2rem 0rem;
+    display: none;
+}
+.product-details-contact-options{
+    display: none;
+    background-color: v.$secondary-color-dark;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem ;
+    position: sticky;
+    top: 0;
+    gap: 1rem;
+    overflow-x: scroll;
+
+    .product-details-contact-options-button{
+       background: white;
+        border: 2px v.$theme-color solid;
+        border-radius: 3rem;
+        color: v.$nav-color;
+        padding: 0.2rem 4.5rem;
+        width: 50%;
+        
+        
+        &.call{
+            
+        }
+        
+        
+        &:hover{
+            background-color: v.$theme-color;
+        }
+    }
+}
+.product-details{
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+   margin: 0rem 0em;
+
+
+
+    .product-slider-container{
+        flex: 2;
+        width: 100%;
+
+        .info-cluster-container-mobile{
+            margin:2rem 0rem;
+            background-color: v.$secondary-color-dark;
+            
+            .info-heading{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row-reverse;
+                align-items: center;
+                color: v.$theme-color;
+                padding: 0.9rem;
+                
+                
+                .product-detail-info{
+                    
+                    
+                    .product-detail-atrib{
+                        font-size: f.$large-font-size;
+                        font-weight: f.$medium-weight;
+                        color: white;
+                    }
+                    .product-detail-price{
+                        font-size: 2.5rem;
+                        font-weight: f.$bold-weight;
+                        color: v.$theme-color;
+    
+                    }
+                }
+        
+            .product-details-heading-wishlist{
+                color: v.$light-color;
+            }
+            .product-details-heading-wishlist.active{
+                color: v.$theme-color;
+            }
+        
+        }
+    }
+        
+        
+        .vehicle-summary{
+          
+            margin: 3rem 1rem;
+            background-color: v.$light-color;
+            
+            .vehicle-summary-heading{
+                font-size: f.$large-font-size;
+                font-weight: f.$bold-weight;
+               
+            }
+            
+            padding: 1rem;
+            border: 1px solid v.$secondary-color-dark;
+            border-radius: 0.2rem;
+            height: max-content;
+            font-weight: f.$bold-weight;
+            color: v.$secondary-color-dark;
+
+            .vehilcle-summary-grid{
+                margin: 1rem 0rem;
+                display: grid;
+                grid-template-columns: auto auto ;
+                
+                gap: 1rem;
+               justify-items: stretch;
+               align-items: center;
+                  
+                   
+            }
+            .vehilcle-smmary-detail-container{
+                display:flex;
+                gap:"1rem";
+                align-items: center;
+
+            }
+        }
+        .product-description{
+            text-align: center;
+            
+            .product-description-heading{
+                background-color: v.$secondary-color-dark;
+                color: v.$light-color;
+                padding:1rem;
+                margin: 1rem 0rem;
+                text-align: start;
+               
+            }
+        }
+    }
+    .extra-features-dropdown{
+        margin: 2rem 0rem;
+        display: flex;
+        flex-direction: column;
+       
+        gap: 1rem;
+       
+    }
+
+    .product-details-info{
+       
+        width: 100%;
+        flex: 1;
+
+        .info-cluster-container{
+
+       display: none;
+        .info-heading{
+            display: none;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            align-items: center;
+            background-color: v.$secondary-color-dark;
+            padding: 0.5rem;
+            color: v.$light-color;
+
+            .product-details-heading-wishlist{
+                color: v.$light-color;
+            }
+            .product-details-heading-wishlist.active{
+                color: v.$theme-color;
+            }
+
+        }
+    }
+
+        .product-detail-info{
+            padding: 0.5rem ;
+            
+
+            .product-detail-atrib{
+                font-size: f.$large-font-size;
+                font-weight: f.$medium-weight;
+            }
+            .product-detail-price{
+                font-size: 2.5rem;
+                font-weight: f.$bold-weight;
+                color: v.$secondary-color-dark;
+            }
+        }
+    }
+    .dealer-contact-form{
+        border: 1px v.$secondary-color-dark solid;
+        padding:1rem;
+        background-color: v.$light-color;
+        border-radius: 0.2rem;
+        margin: 0rem 1rem;
+
+   
+    .dealer-contact-form-container{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem 1rem;
+        font-weight: f.$bold-weight;
+        
+        .form-input{
+            background-color: white;
+            margin-top: 0.4rem;
+        }
+        .send-message-button{
+            background-color: #34B18C
+            ;
+        }
+        .call-button-container{
+            text-align: center;
+            font-size: larger;
+            font-weight: f.$bold-weight;
+
+            .call-button-flex{
+                   display: flex;
+                   justify-content: space-between; 
+                   gap: 1rem;
+                   margin: 1rem 0rem;
+            
+            .call-button-call{
+                background-color: v.$secondary-color-dark;
+                width: 100%;
+            }
+            .call-button-whatsapp{
+                background-color: #39d365;
+                width: 100%;
+            }
+        }
+        }
+    }
+}
+.seller-card{
+    background-color: v.$light-color;
+    color: v.$secondary-color-dark;
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid v.$secondary-color-dark;
+    border-radius: 0.2rem;
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: f.$large-font-size;
+    font-weight: f.$bold-weight;
+
+    .seller-card-heading{
+        color: v.$secondary-color-dark;
+        font-size: 2.5rem;
+        border-bottom: 2px solid v.$secondary-color-dark;
+    }
+    .seller-card-number{
+
+        font-size: 2rem;
+        color: v.$theme-color;
+        
+    }
+    .seller-card-website{
+        color: rgb(81, 81, 254);
+        font-size: 1.5rem;
+        
+    }
+    .seller-card-stock{
+        color: rgb(81, 81, 254);
+    }
+    
+}
+
+.options-button{
+    background-color: v.$white-color;
+    border-radius: 2rem;
+    border: none;
+    color:v.$secondary-color-dark;
+    font-size: 0.5rem;
+    font-weight: 400;
+    &:hover{
+        cursor: default;
+        background-color: v.$white-color;
+    }
+}
+
+}
+.details-recomanded-to-you{
+    text-align: center;
+    color:v.$secondary-color-dark;
+    margin: 3rem 1rem;
+    .recomanded-to-you-heading{
+        font-weight: f.$bold-weight;
+        font-size: 2rem;
+    }
+    
+    .recomanded-to-you-card-container{
+        display: flex;
+        gap: 1rem;
+        overflow-x: scroll;
+        
+        padding: 1rem 0rem;
+        width: 100%;
+       
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .car-details-page{
+    padding: 0rem 2rem;
+    }
+    .product-details-contact-options{
+        display: none;
+    }
+    .ads{
+        display: block;
+    }
+    .product-details{
+        flex-direction: row;
+        margin: 0rem 0rem;
+        
+   
+    .product-slider-container{
+        width: 50%;
+        
+    }
+    .product-details-info{
+        width: 50%;
+        
+        .info-cluster-container{
+           display: block;
+        }
+    }
+   
+    .vehicle-summary{
+        .vehilcle-summary-grid{
+            grid-template-columns: auto auto auto;
+        }
+    }
+    .info-cluster-container-mobile{
+        display: none;
+    }
+   
+}
+.details-recomanded-to-you{
+margin: 0rem 3rem;
+}
+}

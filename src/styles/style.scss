@@ -1,0 +1,67 @@
+@import './variable';
+@import './base';
+@import './fonts';
+@import "../Layouts/layout";
+@import "../Layouts/Header/header";
+@import "../Layouts/Footer/footer";
+@import "../Pages/HomePage/home";
+@import "../Pages/AboutUsPage/aboutPage";
+@import "../Pages/BlogDetailsPage/blogDetails";
+@import "../Pages/BlogsPage/blogPage";
+@import "../Pages/CarDetails/carDetails";
+@import "../Pages/CarsSearchPage/carSearch";
+@import "../Pages/ContactUsPage/contactUs";
+@import "../Pages/LoginPage/loginPage";
+@import "../Pages/NotFoundPage//notFound";
+@import "../Pages/PrivacyPolicyPage/privacyPolicy";
+@import "../Pages/RegisterPage/register";
+
+
+
+.App{
+    .link {
+        color: white;
+        text-decoration: none;
+    }
+    
+    li{
+        list-style: none;
+        &:hover {
+            cursor: pointer;
+            color: $theme-color;
+            transition: 0.5s;
+          }
+    }
+    .ul{
+        margin: 0;
+        padding: 0;
+    }
+    ::-webkit-scrollbar {
+        width: 10px; /* width of the scrollbar */
+        height: 0.7rem;
+        
+      }
+      
+      /* Style the thumb */
+      ::-webkit-scrollbar-thumb {
+        background-color:$secondary-color-dark; /* color of the thumb */
+        border-radius: 10px; /* roundness of the thumb */
+        
+        
+      }
+      
+      /* Style the track */
+      ::-webkit-scrollbar-track {
+        background-color: transparent; /* color of the track */
+        width: 1rem;
+        
+      }
+      
+      /* Style the buttons */
+      ::-webkit-scrollbar-button {
+         /* color of the buttons */
+         
+         width: 2px;
+      }
+    
+}

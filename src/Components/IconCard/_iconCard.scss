@@ -1,0 +1,17 @@
+@use '../../styles/variable' as v;
+.icon-card{
+    height: 5rem;
+    width: 5rem;
+    background-color: v.$light-color;
+    padding: 1rem;
+    border: 1px solid v.$secondary-light-color;
+    border-radius: 2rem;
+    transition: 0.5s;
+    box-shadow: 1px 1px 2px 2px v.$secondary-light-color,4px 4px 2px 2px v.$secondary-light-color;
+
+    &:hover{
+        box-shadow: 4px 4px 2px 2px v.$secondary-light-color,4px 4px 2px 2px v.$secondary-light-color;
+        transition: 0.8s;
+        border-radius: 4rem;
+    }
+}

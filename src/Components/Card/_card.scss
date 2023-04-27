@@ -1,0 +1,107 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+.card{
+    height: max-content;
+    background-color: v.$light-color;
+    width: 20rem;
+    max-width: 100%;
+    min-width: 16rem;
+    border: 1px solid rgba(93, 96, 94, 0.304);
+    border-radius: 0.2rem;
+    overflow: hidden;
+    transition: 0.8s;
+    &:hover{
+        transform: translateY(-4px);
+        transition: 0.8s;
+    }
+    
+
+    .card-img{
+       
+       border-bottom: 2px solid v.$theme-color;
+        height: 100%;
+        width: 100%;
+        transition: 0.5s;
+        object-fit: fill;
+       
+    }
+    .card-info{
+        padding: 0.5rem 0.5rem;
+        color: v.$secondary-color-dark;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.3rem;
+        
+    }
+    &:hover{
+        box-shadow: 3px 3px 3px 3px  v.$secondary-light-color;
+        transition: 0.9s;
+        text-decoration: none;
+    }
+    .card-sponsored{
+        color: v.$theme-color;
+        font-size: f.$large-font-size;
+        font-weight: f.$bold-weight;
+    }
+    .card-img{
+position: relative;
+        .card-favourite{
+            z-index: 5;
+            height: 2rem;
+            width: 2rem;
+            font-size: large;
+            position: absolute;
+            right:1rem;
+            bottom: -1.3rem;
+            color: v.$theme-color;
+            background-color: v.$light-color;
+            border: solid 2px v.$theme-color;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0.2rem;
+            border-radius: 5rem;
+            
+            &:hover {
+                background-color: v.$theme-color ;
+                color:v.$white-color ;
+                transition: 0.9s;
+            }
+            
+            
+        }
+        .favourite-clicked{
+            background-color: v.$theme-color ;
+            color:v.$white-color ;
+           
+        }
+        .card-urgent{
+            background-color: v.$danger-color;
+            font-size: small;
+            width: max-content;
+            color: white;
+            position: absolute;
+            width: 28%;
+            height:"1.6rem";
+            left: 0.2rem;
+            top: 0.2rem;
+            padding: 0.2rem;
+            font-size: f.$base-font-size;
+            
+
+        }
+    }
+}
+ 
+@media only screen and (max-width: 490px ) {
+    .card{
+        width: 100%;
+    }
+
+}
+@media only screen and (min-height: 1024px) {
+    .card{
+        width: 20rem;
+    }
+}

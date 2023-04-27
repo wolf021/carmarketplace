@@ -1,0 +1,62 @@
+@use "../../styles//variable" as v;
+@use "../../styles//fonts" as f;
+
+.blog-card {
+   min-width: 21rem;
+   width: 100%;
+   padding: 2rem 1rem;
+   border: 1px solid v.$secondary-light-color;
+   box-shadow: 3px 3px 3px 3px  v.$secondary-light-color;
+   overflow: hidden;
+   border-radius: 0.5rem;
+   margin: 1rem 0rem;
+   transition: 0.9s;
+   height: max-content;
+
+   &:hover{
+    box-shadow: 4px 4px 4px 4px  v.$secondary-light-color;
+    transform: translateY(-4px);
+    transition: 0.9s;
+   }
+   .blog-img{
+    height: 25vh;
+    width: 100%;
+   }
+
+   .blog-info{
+    text-align: start;
+    margin: 0.5rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .blog-title{
+        color: v.$theme-color;
+        font-size: f.$base-font-size;
+      
+    }
+    .blog-description{
+        color: v.$secondary-color;
+        
+    }
+    .btn-read-more{
+        
+        width: max-content;
+        padding: 0.3rem;
+        font-weight: f.$medium-weight;
+        transition: 0.8s;
+        font-weight: f.$medium-weight;
+        font-size: f.$base-font-size;
+
+        &:hover{
+            
+            transition: 0.8s;
+        }
+    }
+   }
+  
+    // Responsive styles
+    @media only screen and (max-width: 767px) {
+     
+    }
+  }
+  

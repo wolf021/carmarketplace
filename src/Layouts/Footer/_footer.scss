@@ -1,0 +1,103 @@
+@use "../../styles/variable" as v;
+@use "../../styles/fonts" as f;
+
+.footer-banner {
+ 
+  height: max-content;
+  background-color: v.$nav-color;
+  color: v.$light-color;
+  align-items: center;
+  padding: 3rem 1rem;
+  color: v.$light-color;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-banner-heading {
+    font-weight: f.$bold-weight;
+    font-size: 2em;
+    color: v.$light-color;
+  }
+
+  p {
+    font-weight: f.$bold-weight;
+    font-size: f.$base-font-size;
+  }
+  .footer-nav-logo{
+    height: 80%;
+    width: 40%;
+  }
+}
+footer {
+  background-color: #3c3241;
+  padding: 2rem 6em;
+  color: v.$light-color;
+  
+
+
+  .footer-nav{
+   display: flex;
+   justify-content: space-between;
+   
+
+   .footer-nav-heading{
+    color: v.$theme-color;
+    font-size: f.$large-font-size;
+    font-weight: f.$bold-weight;
+   }
+   
+   .footer-lists{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: space-evenly;
+    padding-bottom: 1.4rem;
+    
+    
+   }
+  }
+
+  .footer-social-media{
+    margin: 1rem 0rem 0rem 0rem;
+    text-align: center;
+    border: solid;
+    border-left: 0.3rem;
+    border-right: 0.3rem;
+    border-color: v.$theme-color;
+    
+    .footer-social-heading{
+        font-size:f.$large-font-size;
+        color: v.$light-color;
+        font-weight: f.$bold-weight;
+    }
+    
+  }
+  .social-links{
+    display: flex;
+    justify-content: center;
+    
+    padding: 0;
+    gap: 1rem;
+    
+  }
+  .reserved{
+    text-align: center;
+  }
+ 
+  
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-banner{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    footer{
+        padding: 2rem 2rem;
+    }
+    .footer-nav{
+        flex-direction: column;
+        text-align: center;
+    }
+}
