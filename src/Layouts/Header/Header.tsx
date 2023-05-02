@@ -44,7 +44,10 @@ const isLogedIn = true
    <header className='site-header' >
     <div className='container' >
       <div className='nav-logo' >
+        <Link to="/" >
+
          <img src={Logo} alt="logo" height="100%" width="100%" /> 
+        </Link>
         
       </div>
       <form  className='search-bar' action="submit">
