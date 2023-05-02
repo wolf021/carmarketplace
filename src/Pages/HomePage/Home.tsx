@@ -16,6 +16,8 @@ import MakeImg5 from  '../../Assets/MakeIcon/svg13.png'
 import MakeImg6 from  '../../Assets/MakeIcon/svg16.png'
 import BlogCard from '../../Components/BlogCard/BlogCard';
 import BlogImg from '../../Assets/home1.jpg'
+import HomeSearchForm from '../../Components/HomeSearchForm/HomeSearchForm';
+import { Cars } from "../../Data/data"
 
 
 
@@ -36,75 +38,44 @@ const Home = () => {
       
 
       </div>
-      
-      <div className='hero-form-container' >
-        <form action="submit">
+      <div className='home-search-form-container'>
 
-          <div className='search-input-container' >
-            <div className=''>
-            <h4>Make</h4>
-            <select >
-            <option value="" >Make</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
-            </div>
-            <div className=''>
-              <h4>Model</h4>
-            <select >
-            <option value="" >Model</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
-            </div>
-            <div className=''>
-            <h4>Price Range</h4>
-            <select >
-            <option value="" >Min</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
-            </div>
-            <div className=''>
-            <h4>.</h4>
-            <select >
-            <option value="" >Max</option>
-  <option value="option2">Option 2</option>
-  <option value="option3">Option 3</option>
-</select>
-            </div>
-            
-          </div>
-          <div className='location-container' >
-            <div >
-              <h4>Location</h4>
-              <div className='location-input-container'>
-                <FmdGoodIcon className='search-input-pin' />
-              <input type="text" placeholder='PostCode or Location' className='location-input'  />
-              </div>
-            </div>
-            
-            <button className='search-container-button'>Search Cars</button>
-          </div>
-        </form>
+      <HomeSearchForm />
       </div>
+     
       
     </section>
-   
+    <div className='home-search-form-container-mobile'>
+
+<HomeSearchForm />
+</div>
     <div  className='widespace' ></div>
     { reacent &&
 
     <section className='reacently-viewed' >
       <div>Welcome Back</div>
+      <br/>
       <div>Your Reacently Viewed</div>
        <div className='reacently-viewed-card-container'>
         
-
-     
-       <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true} hot={true} />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
-        
+       {Cars.map((car) => (
+              <Card
+                make={car.make}
+                model={car.model}
+                price={car.price}
+                miles={car.miles}
+                year={car.year}
+                link="/"
+                cardImg={car.images}
+                days={car.days}
+                sponsored={true}
+              />
+            ))}
+{/*      
+       <Card  year={2022} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} />
+       <Card  year={2019} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card  year={2010} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
+         */}
       
        
         
@@ -116,7 +87,7 @@ const Home = () => {
 
     <section className='popular-makes' >
       <h3  >Popular Makes</h3>
-      <div className='make-container' >
+      <div className=' year={2017} make-container' >
         <IconCard link='/' MakeIcon={MakeImg} />
         <IconCard link='/' MakeIcon={MakeImg2} />
         <IconCard link='/' MakeIcon={MakeImg3} />
@@ -142,14 +113,27 @@ const Home = () => {
     <section className='recently-listed-section' >
       <h3 className='reacently-heading' > Recently Listed</h3>
       <div className='card-container' >
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true} hot={true} />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} hot={true}  />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={3} sponsored={true} hot={true}  />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1}sponsored={true} />
-        <Card make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true}/>
+      {Cars.map((car) => (
+              <Card
+                make={car.make}
+                model={car.model}
+                price={car.price}
+                miles={car.miles}
+                year={car.year}
+                link="/car-details"
+                cardImg={car.images}
+                days={car.days}
+                sponsored={true}
+              />
+            ))}
+        {/* <Card  year={2022} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} />
+        <Card  year={2019} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card  year={2020} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
+        <Card  year={2011} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true} hot={true}  />
+        <Card  year={2020} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1} sponsored={true}/>
+        <Card  year={2004} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={3} sponsored={true} hot={true}  />
+        <Card  year={2004} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={1}sponsored={true} />
+        <Card  year={2012} make='Proton X70' price={5000} miles={17000} link="/car-details" cardImg={CardImg} days={2} sponsored={true}/> */}
         </div>
     </section>
     <section className='why-choose-us'>

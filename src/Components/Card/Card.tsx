@@ -61,7 +61,7 @@ const handleFavouriteClick = useCallback( (event: any) =>{
             </div>
             { props.hot &&
 
-            <div  >
+            <div style={{width:"10%"}} >
               <Buttons className="card-urgent" name="Hot" icon={<WhatshotIcon/>} />
             </div>
             }

@@ -36,7 +36,7 @@ const Blogs = () => {
           </select >
           <Button className='blogs-search-form-button' name="Search 4000 Articles" />
         </div>
-        <Tabs 
+        <Tabs  style={{color:"#0e6290"}}
         value={value}
         onChange={handleChange}
         indicatorColor="primary"

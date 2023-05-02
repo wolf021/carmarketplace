@@ -247,14 +247,31 @@ const url = "gumtree.com"
           </Link>
 
         </div>
+        <div></div>
         <div className='details-ads' >
-
+ 
         </div>
       </div>
 
     </section>
     <section className='details-recomanded-to-you' >
         <h4 className='recomanded-to-you-heading' >Recomanded To You</h4>
+        <div className='recomanded-to-you-card-container' >
+
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={1} sponsored={true} />
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={2} sponsored={true} hot={true} />
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={1} sponsored={true}/>
+        <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={1} sponsored={true} />
+        </div>
+    </section>
+    <br/>
+    
+    
+    <section className='details-recomanded-to-you' >
+        <h4 className='recomanded-to-you-heading' >More From this Seller</h4>
         <div className='recomanded-to-you-card-container' >
 
         <Card make='Proton X70' price={5000} miles={17000} link="/" cardImg={CardImg} days={1} sponsored={true} />

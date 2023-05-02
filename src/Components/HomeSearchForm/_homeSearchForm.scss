@@ -1,0 +1,79 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+
+
+.hero-form-container{
+    width: auto;
+    border: 1px solid black;
+    padding: 0rem 1rem;
+    background-color: v.$light-color;
+   
+    
+    .homesearch-heading{
+        color: v.$theme-color;
+        font-size: 1.5rem;
+        text-align: center;
+
+   }
+
+    .location-input-container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: v.$light-color;
+        border: solid 1px v.$theme-color;
+        .search-input-pin{
+            color: v.$theme-color;
+        }
+        border-radius: 0.2rem;
+        .location-input{
+            border: none;
+            width: 100%;
+          
+        }
+    }
+    .home-form-container-wrapper{
+        display: grid;
+        gap: 1rem;
+        margin: 1rem 0rem;
+        .hero-form-selects{
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 1rem;
+            .hero-search-select{
+                height: 2rem;
+                background-color: transparent;
+                border: 1px solid  v.$theme-color;
+                border-radius: 0.2rem;
+                color: #757575;
+                outline: v.$theme-color;
+
+
+            }
+
+        }
+    }
+    .search-container-button{
+        background-color: v.$theme-color;
+        width: 100%;
+        
+        &:hover{
+            background-color: v.$theme-color;
+        }
+    }
+    .reset{
+        background: none;
+        color: red;
+        border: none;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+    .more{
+        color: v.$theme-color;
+        background: none;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+}
