@@ -392,7 +392,7 @@ const CarsSearch = () => {
             
             </div>
           <div className="searc-results-header">
-            <h3 style={{ fontSize: "1rem" }}>230,264 results</h3>
+            <h3 style={{ fontSize: "1rem" }}>8 results</h3>
             <select className="search-radius-input-select" name="sort" id="">
               <option value="sort by distance">Sort by distance</option>
             </select>

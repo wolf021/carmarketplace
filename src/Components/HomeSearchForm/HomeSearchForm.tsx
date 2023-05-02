@@ -7,11 +7,11 @@ import {Link} from 'react-router-dom'
 
 
 type HomeSearch = {
-  
+  carResults?:Number,
+  res?: boolean
 }
 
-
-const HomeSearchForm = () => {
+const HomeSearchForm = (props:HomeSearch) => {
   return (
     <div className='hero-form-container' >
     <form action="submit" className='home-form-container-wrapper' >
@@ -53,7 +53,7 @@ const HomeSearchForm = () => {
 </select>
 </div>
 <Link to="/car-search" >
-<Button link="/car-search" name="Search 23000 Cars" icon={<SearchIcon/>} className='search-container-button'/>
+<Button link="/car-search" name={props.carResults?`Search ${props.carResults} Cars`: "loading..."} icon={<SearchIcon/>} className='search-container-button'/>
 </Link>
     
      

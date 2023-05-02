@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import HeroImg from '../../Assets/heroimg.jpg';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import SellIcon from '@mui/icons-material/Sell';
@@ -22,10 +22,22 @@ import { Cars } from "../../Data/data"
 
 
 const Home = () => {
+  const [searchRes, setSearchRes] = useState(0)
   const reacent = true 
+  
+
+  useEffect(() => {
+    
+    setSearchRes(Cars.length)
+    console.log(searchRes)
+   
+  }, [searchRes])
+  
+
+
   return (
     <>
-    
+  
 
     <section className='hero-section'>
       <div className='her0-info'>
@@ -40,14 +52,14 @@ const Home = () => {
       </div>
       <div className='home-search-form-container'>
 
-      <HomeSearchForm />
+      <HomeSearchForm res={false} carResults={searchRes} />
       </div>
      
       
     </section>
     <div className='home-search-form-container-mobile'>
 
-<HomeSearchForm />
+<HomeSearchForm res={false} carResults={searchRes} />
 </div>
     <div  className='widespace' ></div>
     { reacent &&
@@ -65,7 +77,7 @@ const Home = () => {
                 price={car.price}
                 miles={car.miles}
                 year={car.year}
-                link="/"
+                link="/car-details"
                 cardImg={car.images}
                 days={car.days}
                 sponsored={true}

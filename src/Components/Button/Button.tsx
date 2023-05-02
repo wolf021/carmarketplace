@@ -4,7 +4,7 @@ import './_button.scss'
 import { Link } from 'react-router-dom';
 
 type ButtonProps={
-    name?:String,
+    name?:any,
     onClick?: () => void;
     icon?: any;
     className?: string;
