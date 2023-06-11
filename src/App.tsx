@@ -1,12 +1,19 @@
 import React from 'react';
-import Navigation from './Navigation';
+
 
 import '../src/styles/style.scss'
+import WebSiteRoutes from './Routes/WebSiteRoutes';
+import { Route, Routes } from 'react-router';
+import DashboardRoutes from './Routes/DashboardRoutes';
 
 function App() {
   return (
     <div className="App">
-     <Navigation />
+      <Routes>
+    <Route path='/*' element={<WebSiteRoutes/>} />
+    <Route path='/traders-central/*' element={<DashboardRoutes/>} />
+     
+      </Routes>
     </div>
   );
 }

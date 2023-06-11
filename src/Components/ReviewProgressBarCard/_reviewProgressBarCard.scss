@@ -1,0 +1,17 @@
+@use "../../styles//variable" as v;
+@use "../../styles//fonts" as f;
+@use "../../styles//mixin" as mix;
+
+.review-progress{
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: flex-start;
+
+    .traders-review-card-heading{
+        color: v.$theme-color;
+        font-weight: f.$bold-weight;
+        margin: 0.2rem 0rem;
+    }
+}

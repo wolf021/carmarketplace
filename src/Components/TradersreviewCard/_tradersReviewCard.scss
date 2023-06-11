@@ -1,0 +1,24 @@
+@use '../../styles//variable' as v;
+@use '../../styles//fonts' as f;
+
+.traders-review-card{
+   border-bottom: 1px solid lightgrey;
+   padding: 2rem 0rem;
+   margin: 0rem 2rem;
+
+   .traders-review-card-heading{
+    color: v.$theme-color ;
+    font-size: large;
+    font-weight: f.$bold-weight;
+   }
+   .traders-review-card-days{
+    color: v.$theme-color ;
+    font-size: small;
+   }
+   .trades-review-card-flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+   }
+}

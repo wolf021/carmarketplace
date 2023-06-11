@@ -14,7 +14,7 @@ const BlogCard = (props:blogCard) => {
     <div className={`blog-card `}>
         <div className='blog-img' >
 
-    <img src={props.blogImg} alt={props.blogTitle} width="100%" height="100%" />
+    <img loading='lazy' src={props.blogImg} alt={props.blogTitle} width="100%" height="100%" />
         </div>
     <div className="blog-info">
       <h2 className="blog-title">{props.blogTitle}</h2>

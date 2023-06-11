@@ -48,11 +48,11 @@ const handleFavouriteClick = useCallback( (event: any) =>{
           <div style={{display:"flex",gap:"0.2rem 0.2rem" }} >
 
           
-          <img src={props.cardImg} alt="" width="70%" height="100%" />
+          <img loading="lazy" src={props.cardImg} alt="" width="70%" height="100%" />
           <div style={{display:"flex",flexDirection:"column",gap:"0.2rem"}}>
 
-          <img   src={props.cardImg} alt="" width="100%" height="100%" />
-          <img  src={props.cardImg} alt="" width="100%" height="100%" />
+          <img loading="lazy"  src={props.cardImg} alt="" width="100%" height="100%" />
+          <img loading="lazy" src={props.cardImg} alt="" width="100%" height="100%" />
           </div>
           </div>
           

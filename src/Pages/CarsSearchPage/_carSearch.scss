@@ -132,7 +132,7 @@
                 &:active &:focus{
                  outline-color: v.$secondary-color-dark;
                 }
-                -webkit-appearance: none;
+               
             background-position-x: 98%;
 
             }
@@ -153,7 +153,7 @@
                 border: v.$secondary-light-color 1px solid;
                 
                 
-                -webkit-appearance: none;
+                
             
             }
         }
@@ -203,9 +203,7 @@
     padding: 0.5rem 0.5rem;
     border-radius: 0.5rem;
 
-    .search-form-flex{
-
-    }
+    
     .search-form-input{
         width: 100%;
         background-color:white;
@@ -220,7 +218,7 @@
         
         background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #ffffff;
 
-        -webkit-appearance: none;
+        
     background-position-x: 98%;
    outline-color: v.$secondary-color-dark;
    &:active &:focus{

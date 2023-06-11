@@ -43,7 +43,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images,onClick }) => {
       <div className="image-slider-main" >
         <div className="images"  >
 
-        <img className={`images ${isLoading? "loading" : ""}`}  onLoad={handleLoad}  src={images[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
+        <img loading="lazy" className={`images ${isLoading? "loading" : ""}`}  onLoad={handleLoad}  src={images[currentImageIndex]} alt={`Image ${currentImageIndex}`} />
         </div>
         <div className="image-slider-controls" >
             <div className="numbers" >
@@ -61,7 +61,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images,onClick }) => {
       </div>
       <div className="image-slider-thumbnails">
         {images.map((image, index) => (
-          <img 
+          <img loading="lazy"
             key={index}
             src={image}
             alt={`Image ${index}`}

@@ -16,7 +16,7 @@ const BlogsCard = () => {
   return (
     <div className='blogs-card' >
         <div className='blogs-card-img' >
-            <img src={BlogImg} alt="" width="100%" height="100%" />
+            <img loading='lazy' src={BlogImg} alt="" width="100%" height="100%" />
         </div>
         <div className='blogs-card-info' >
             <div className='blogs-card-info-details' >

@@ -1,0 +1,53 @@
+@use '../../../styles//variable' as v;
+@use '../../../styles//fonts' as f;
+@use '../../../styles/mixin' as mix;
+.traders-contactus-page{
+    margin: 1rem 1rem;
+           
+.traders-contact-heading{
+    color: v.$theme-color;
+}
+    .contact-us-container{
+        display: flex;
+        gap: 4rem;
+        margin: 1rem 0rem;
+
+        .traders-contact-details{
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: max-content;
+            .traders-contact--details-button{
+                background-color: v.$theme-color;
+                color: white;
+                border: 1px solid v.$theme-color;
+                padding: 0.3rem 2rem;
+            }
+        }
+        .traders-contact-form{
+            flex: 2;
+            
+            height: max-content;
+
+            .traders-contact-form-container{
+                margin: 2rem 0rem;
+                display: grid;
+                gap: 2.5rem;
+                grid-template-columns: auto auto;
+                color: v.$theme-color;
+            }
+            .traders-contact-form-button{
+                background-color: v.$theme-color;
+                align-self: end;
+                width: 50%;
+            }
+
+            .traders-contact--form-consent{
+                display: flex;
+                gap: 1rem;
+                margin: 2rem 0rem;
+            }
+        }
+    }
+}

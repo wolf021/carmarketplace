@@ -1,0 +1,53 @@
+@use "../../styles//variable" as v;
+@use "../../styles//fonts" as f;
+
+.traders-card-container{
+
+    max-width: 100%;
+    
+    &:hover{
+        box-shadow: 1px 1px 3px 3px lightgray;
+        transition: 0.4s;
+        text-decoration: none ;
+        
+        
+    }
+    
+
+.traders-card{
+    text-decoration: none;
+    border: 1px solid v.$theme-color;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    gap: 1rem;
+    width: auto;
+    border-radius: 0.3rem;
+ 
+    h4{
+        color: v.$theme-color;
+    }
+    .traders-car-img{
+        
+        height: 4rem;
+        width: auto;
+        border-bottom: 1px solid lightgray;
+        padding: 1rem 2rem;
+        max-width: 10rem;
+    }
+
+    .traders-card-contact{
+        margin: 0.1rem 0rem;
+        display: flex;
+        gap: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid lightgray;
+        width: 100%;
+        color: v.$theme-color;
+        font-weight: f.$medium-weight;
+        
+ 
+    }
+}
+}

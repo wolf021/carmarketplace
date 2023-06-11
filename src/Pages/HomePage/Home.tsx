@@ -70,7 +70,7 @@ const Home = () => {
       <div>Your Reacently Viewed</div>
        <div className='reacently-viewed-card-container'>
         
-       {Cars.map((car) => (
+       {Cars.slice(0,3).map((car) => (
               <Card
                 make={car.make}
                 model={car.model}
